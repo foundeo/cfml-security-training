@@ -31,6 +31,7 @@
 	            <li><a href="/tools/rereplace.cfm">reReplace</a></li>
 	            <li role="separator" class="divider"></li>
 	            <li><a href="/tools/reset-database.cfm">Reset Database</a></li>
+	            <li><a href="/tools/reset-code.cfm">Reset Codebase</a></li>
 	          </ul>
 	        </li>
       	</ul>
