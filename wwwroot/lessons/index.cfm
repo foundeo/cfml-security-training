@@ -8,6 +8,8 @@
 
     <cfinclude template="xss.cfm">
 
+    <cfinclude template="security-headers.cfm">
+
     <cfinclude template="csrf.cfm">
   
     <cfinclude template="authentication.cfm">
