@@ -19,7 +19,8 @@
             <h5>Was the developer careless in how they authorized users?</h5> 
             <p>Find a place where the developer forgot to check for authorized users.</p>
 
-            
+            <h5>Does the remember me feature have weaknesses?</h5>
+            <p>You bet, take a look.</p>
             
 
         </div>

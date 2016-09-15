@@ -14,7 +14,7 @@
             <p>Session identifiers should be kept secret. The cookies should be <code>httpOnly</code> and <code>secure</code> - use the developer </p>
 
             <h5>Can you make the session cookies <code>httpOnly</code> and <code>secure</code>?</h5>
-            <p>Try to read a file that a public user should not have access to, for example the <code>/config/master-password.txt</code> file above the web root.</p>
+            <p>There are a few ways to do this.</p>
 
             <h5>Are there other cookies that should be protected as well?</h5>
             <p>Look for <code>cfcookie</code> tags.</p>
