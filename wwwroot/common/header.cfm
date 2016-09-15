@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Bank of Insecurity</title>
-	<link href="/common/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-awusxf8AUojygHf2+joICySzB780jVvQaVCAt1clU3QsyAitLGul28Qxb2r1e5g+">
+	<link href="/common/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
