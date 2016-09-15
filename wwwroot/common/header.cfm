@@ -15,6 +15,7 @@
           <ul class="nav navbar-nav">
             <li<cfif cgi.script_name contains "/news/"> class="active"</cfif>><a href="/news/">News</a></li>
             <li<cfif cgi.script_name contains "/about/"> class="active"</cfif>><a href="/about/">About</a></li>
+            <li<cfif cgi.script_name contains "/contact/"> class="active"</cfif>><a href="/contact/">Contact</a></li>
             <li<cfif cgi.script_name contains "/my-account/"> class="active"</cfif>><a href="/my-account/">My Account</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -41,3 +42,4 @@
 </nav><br><br><br><br>
 
 <div id="main" class="container">
+<!-- MAIN BODY CONTENT START -->

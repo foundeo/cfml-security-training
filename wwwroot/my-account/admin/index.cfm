@@ -1,6 +1,7 @@
 <cfinclude template="admin-check.cfm">
-<h1>Bank Admin</h1>
+<h2>Bank Admin</h2>
 
+<h3>User Accounts</h3>
 <cfquery name="users">
 	SELECT id, username, is_admin, balance, photo
 	FROM users
@@ -26,3 +27,36 @@
 		</cfoutput>
 	</tbody>
 </table>
+
+<br><br>
+<h3>Messages</h3>
+
+<cfquery name="contact">
+	SELECT id, name, subject, message, date_posted
+	FROM contact
+</cfquery>
+
+<cfif contact.recordcount>
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Message</th>
+			<th>Date</th>
+			<th width="100">&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<cfoutput query="contact">
+			<tr>
+				<td>#contact.name#</td>
+				<td><strong>#contact.subject#</strong><br><br>#contact.message#</td>
+				<td>#dateTimeFormat(contact.date_posted, "full")#</td>
+				<td><a href="delete-message.cfm?id=#contact.id#" class="btn btn-large btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</a>
+			</tr>
+		</cfoutput>
+	</tbody>
+</table>
+<cfelse>
+<div class="alert alert-info">Sorry - no one has contacted us yet.</div>
+</cfif>

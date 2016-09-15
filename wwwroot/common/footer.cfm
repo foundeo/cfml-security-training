@@ -1,3 +1,4 @@
+<!-- MAIN BODY CONTENT END -->
 </div>
 <br>
 <div class="text-muted text-center">The <em>Bank of Insecurity</em> was built by Pete Freitag, <a href="https://foundeo.com/">Foundeo Inc.</a> for CFML Security Training purposes.</div>
