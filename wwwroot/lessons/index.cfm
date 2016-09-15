@@ -6,4 +6,8 @@
 
     <cfinclude template="path-traversal.cfm">
   
+    <cfinclude template="authentication.cfm">
+
+    <cfinclude template="sessions.cfm">
+
 </div>

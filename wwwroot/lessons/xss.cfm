@@ -48,6 +48,12 @@
                     <a href="../news/search.cfm?search=#encodeForURL(xss)#">/news/search.cfm?search=#encodeForHTML(xss)#</a>
                     
                     <br>
+
+                    <strong>Reflected XSS Example: Cookie Alert</strong><br>
+                    <cfsavecontent variable="xss"><script>alert(document.cookie)</script></cfsavecontent>
+                    <a href="../news/search.cfm?search=#encodeForURL(xss)#">/news/search.cfm?search=#encodeForHTML(xss)#</a>
+                    <br>
+
                     <strong>Persistant XSS</strong>
                     <p>Post a message to the Contact Us form, and then login as <code>pete</code>, an admin to view it.</p>
 

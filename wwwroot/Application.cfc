@@ -4,6 +4,10 @@ component {
 	this.scriptProtect = "none";
 	this.compileExtForInclude = "*";
 
+	this.sessionCookie.httpOnly = false;
+	this.sessionCookie.secure = false;
+	this.sessionCookie.timeout = -1;
+
 	//create datasource requires CF11+
 	this.datasources["bankofinsecurity"] = {
 	  		class: (server.keyExists("lucee")) ? 'org.gjt.mm.mysql.Driver' : 'com.mysql.jdbc.Driver', 
