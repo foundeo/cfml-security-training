@@ -17,6 +17,11 @@
 </cfif>
 --->
 
+<h1>Thanks!</h1>
+
+<cfoutput>
+<div class="alert alert-success"><span class="glyphicon glyphicon-ok"></span> &quot;Photo&quot; Uploaded Successfully <a href="/my-account/photos/#cffile.serverFile#">View</a></div>
+</cfoutput>
 <!--- TODO make sure username is unique --->
 <cfquery>
 	INSERT INTO users (username, password, photo, balance, date_created)
@@ -29,10 +34,10 @@
 	)
 </cfquery>
 
-<h1>Thanks!</h1>
+
 <div class="alert alert-success">Your account has been setup, thanks! Please make a deposit.</div>
 <cfcatch>
-	<h2>Sorry</h2>
+	<h2>Sorry <small>Registration Incomplete</small></h2>
 	<div class="alert alert-danger"><cfoutput>#cfcatch.message#</cfoutput></div>
 	<p><cfoutput>#cfcatch.detail#</cfoutput></p>
 </cfcatch>

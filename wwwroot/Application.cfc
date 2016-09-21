@@ -23,6 +23,7 @@ component {
 	public void function onApplicationStart() {
 		application.dsn = this.datasource;
 		application.appRootPath = getDirectoryFromPath(getCurrentTemplatePath());
+		application.masterPassword = getMasterPassword();
 	}
 
 	public function onRequest(string targetPage) {
@@ -50,6 +51,10 @@ component {
 				fileClose(local.fileObject);
 			}
 		}
+	}
+
+	public void function onError(exception, eventName) {
+		include "error.cfm";
 	}
 
 	public function getRootDirectory() {
