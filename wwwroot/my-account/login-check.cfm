@@ -15,7 +15,7 @@
 
 <!--- redirect to login if not logged in and not login form --->
 <cfif cgi.script_name IS NOT "/my-account/index.cfm">
-	<cfif NOT IsDefined("session.isLoggedIn") OR NOT session.isLoggedIn>
+	<cfif NOT session.isLoggedIn>
 		<cflocation url="/my-account/">
 	</cfif>
 </cfif>

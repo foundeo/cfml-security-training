@@ -16,6 +16,6 @@
 
     <cfinclude template="sessions.cfm">
 
-
+    <cfinclude template="scope-injection.cfm">
 
 </div>

@@ -3,6 +3,7 @@ component {
 	this.sessionManagement = true;
 	this.scriptProtect = "none";
 	this.compileExtForInclude = "*";
+	this.searchImplicitScopes = true;
 
 	this.sessionCookie.httpOnly = false;
 	this.sessionCookie.secure = false;
