@@ -13,7 +13,7 @@
 		<td>
 		<cftry>
 			<cfquery>
-				SELECT 1
+				SELECT 1 <cfif request.dbType IS "derby"> FROM users</cfif>
 			</cfquery>
 			<div class="alert alert-success">
 				<strong><span class="glyphicon glyphicon-ok"></span> Datasource: #encodeForHTML(application.dsn)# setup successfully.</strong> 
@@ -23,7 +23,7 @@
 					<strong>
 						<span class="glyphicon glyphicon-warning-sign"></span> Please Setup a MySQL Datasource Named: #encodeForHTML(application.dsn)#
 					</strong>
-					<p>Error: #encodeForHTML(cfcatch.message)#</p>
+					<p>Error: #encodeForHTML(cfcatch.message)# #encodeForHTML(cfcatch.detail)#</p>
 				</div>
 			</cfcatch>
 		</cftry>
@@ -52,6 +52,7 @@
 		</cftry>
 		</td>
 	</tr>
+	<cfif request.dbType IS "mysql">
 	<tr>
 		<td>MySQL Version:</td>
 		<td>
@@ -69,6 +70,7 @@
 		</cftry>
 		</td>
 	</tr>
+	</cfif>
 	<tr>
 		<td>CFML Engine Version:</td>
 		<td>#server.coldfusion.productname# <cfif server.keyExists("lucee")>#server.lucee.version#<cfelse>#server.coldfusion.productversion#</cfif></td>

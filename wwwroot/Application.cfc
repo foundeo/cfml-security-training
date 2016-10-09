@@ -1,5 +1,5 @@
 component {
-	this.name = "BankOfInsecuity";
+	this.name = "BankOfInsecuityApp";
 	this.sessionManagement = true;
 	this.scriptProtect = "none";
 	this.compileExtForInclude = "*";
@@ -8,7 +8,7 @@ component {
 	this.sessionCookie.httpOnly = false;
 	this.sessionCookie.secure = false;
 	this.sessionCookie.timeout = -1;
-	this.dbType = "mysql";
+	this.dbType = "derby";
 
 	if (this.dbType == "mysql") { 
 		//create datasource requires CF11+
@@ -19,6 +19,11 @@ component {
 		  		username: 'bankofi', 
 		  		password: getMasterPassword(),
 		  		driver: "other"
+		};
+	} else if (this.dbType == "derby") {
+		this.datasources["bankofinsecurity"] = {
+			database: getRootDirectory() & "db/boi/",
+			driver: "Apache Derby Embedded"
 		};
 	}
 
