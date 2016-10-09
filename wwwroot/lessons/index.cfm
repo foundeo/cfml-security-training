@@ -11,6 +11,8 @@
     <cfinclude template="security-headers.cfm">
 
     <cfinclude template="csrf.cfm">
+
+    <cfinclude template="remote-execution.cfm">
   
     <cfinclude template="authentication.cfm">
 

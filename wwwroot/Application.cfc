@@ -8,16 +8,19 @@ component {
 	this.sessionCookie.httpOnly = false;
 	this.sessionCookie.secure = false;
 	this.sessionCookie.timeout = -1;
+	this.dbType = "mysql";
 
-	//create datasource requires CF11+
-	this.datasources["bankofinsecurity"] = {
-	  		class: (server.keyExists("lucee")) ? 'org.gjt.mm.mysql.Driver' : 'com.mysql.jdbc.Driver', 
-	  		connectionString: 'jdbc:mysql://localhost:3306/bankofinsecurity?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true', 
-	  		url: 'jdbc:mysql://localhost:3306/bankofinsecurity?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true', 
-	  		username: 'bankofi', 
-	  		password: getMasterPassword(),
-	  		driver: "other"
-	};
+	if (this.dbType == "mysql") { 
+		//create datasource requires CF11+
+		this.datasources["bankofinsecurity"] = {
+		  		class: (server.keyExists("lucee")) ? 'org.gjt.mm.mysql.Driver' : 'com.mysql.jdbc.Driver', 
+		  		connectionString: 'jdbc:mysql://localhost:3306/bankofinsecurity?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true', 
+		  		url: 'jdbc:mysql://localhost:3306/bankofinsecurity?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true', 
+		  		username: 'bankofi', 
+		  		password: getMasterPassword(),
+		  		driver: "other"
+		};
+	}
 
 	this.datasource = "bankofinsecurity";
 
@@ -25,9 +28,11 @@ component {
 		application.dsn = this.datasource;
 		application.appRootPath = getDirectoryFromPath(getCurrentTemplatePath());
 		application.masterPassword = getMasterPassword();
+
 	}
 
 	public function onRequest(string targetPage) {
+		request.dbType = this.dbType;
 		//disable the browsers builtin XSS protection to demo XSS
 		cfheader(name="X-XSS-Protection",value="0");
 		include "common/header.cfm";
