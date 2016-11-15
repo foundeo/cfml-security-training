@@ -59,7 +59,7 @@
 			  id INT NOT NULL GENERATED ALWAYS AS IDENTITY,
 			  title varchar(100) NOT NULL,
 			  story VARCHAR(1000) NOT NULL,
-			  date_published datetime
+			  date_published TIMESTAMP
 			  
 			)
 		</cfquery>
