@@ -39,8 +39,8 @@
             <div class="collapse" id="#lessonID#Example">
               <div class="well">
                     
-                    <strong>Show Usernames and passwords from Users table</strong><br>
-                    <cfsavecontent variable="x">0 UNION SELECT id, username, password, date_created FROM users</cfsavecontent>
+                    <strong>MySQL: Show Usernames and passwords from Users table</strong><br>
+                    <cfsavecontent variable="x">0 UNION SELECT id, username AS title, password AS story, date_created AS date_published FROM users</cfsavecontent>
                     <a href="../news/story.cfm?id=#encodeForURL(x)#">/news/story.cfm?id=#encodeForHTML(x)#</a>
 
                     
