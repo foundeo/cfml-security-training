@@ -34,11 +34,10 @@ We'll use commandbox or `box` for short to spin up a local CFML server. You can 
 
 Start up a CFML server, using commandbox you can just do:
 
-  cd wwwroot
-  box server start cfengine=adobe@2016
+	cd wwwroot
+	box server start cfengine=adobe@2016
   
 The above will start up a CF2016 server on a random port number and open your default web browser to the server.
-
 
 
 ### Optional: MySQL Setup
