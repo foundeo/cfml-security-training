@@ -58,8 +58,8 @@
 			CREATE TABLE news (
 			  id INT NOT NULL GENERATED ALWAYS AS IDENTITY,
 			  title varchar(100) NOT NULL,
-			  story LONG VARCHAR NOT NULL,
-			  date_published date
+			  story VARCHAR(1000) NOT NULL,
+			  date_published datetime
 			  
 			)
 		</cfquery>
