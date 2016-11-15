@@ -45,7 +45,9 @@ The above will start up a CF2016 server on a random port number and open your de
 By default it is setup to use Apache Derby, which should work well for Adobe ColdFusion engines (since it is included by default). If you are using Lucee or want to use MySQL instead of Derby please follow these instructions:
 
 1) Create a empty database called `bankofinsecurity`
+
 2) Create a user account `bankofi` with password `bankofi` 
+
 3) If running on Adobe ColdFusion you will need to add the MySQL database driver to your lib directory in `~/.CommandBox/server/{server-id}/adobe-{version}/WEB-INF/lib`
 
 ## History / About
