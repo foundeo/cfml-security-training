@@ -4,7 +4,8 @@
 	<cfif session.isAdmin>
 		<a href="admin/" class="btn btn-danger btn-large">Bank Admin</a>
 	</cfif>
-	<a href="logout.cfm" class="btn btn-priary btn-large">Logout</a>
+	<a href="profile.cfm" class="btn btn-default btn-large">Profile</a>
+	<a href="logout.cfm" class="btn btn-default btn-large">Logout</a>
 </div>
 <h1>Hi <cfoutput>#session.username# <small>(Member ID: #session.userID#)</small></cfoutput></h1>
 <cfquery name="user">

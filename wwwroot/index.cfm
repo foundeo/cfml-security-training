@@ -37,7 +37,14 @@
 				SELECT username FROM users
 			</cfquery>
 			<div class="alert alert-success">
-				<strong><span class="glyphicon glyphicon-ok"></span> Database setup successfully.</strong> 
+				<div class="row">
+					<div class="col-sm-8">
+						<strong><span class="glyphicon glyphicon-ok"></span> Database setup successfully.</strong> 
+					</div>
+					<div class="col-sm-4 text-right">
+						<a href="tools/reset-database.cfm" class="btn btn-default btn-sm">Rebuild Database</a>
+					</div> 
+				</div>
 			</div>
 			<cfcatch>
 				<div class="alert alert-danger">

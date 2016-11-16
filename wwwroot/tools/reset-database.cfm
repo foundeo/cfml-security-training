@@ -103,7 +103,7 @@
 	<cfelseif request.dbType IS "derby">
 		<cfquery>
 			CREATE TABLE users (
-			  id INT NOT NULL GENERATED ALWAYS AS IDENTITY,
+			  id INT NOT NULL GENERATED ALWAYS AS IDENTITY CONSTRAINT boi_users_pk PRIMARY KEY,
 			  username varchar(100),
 			  password varchar(250),
 			  is_admin int DEFAULT 0,
