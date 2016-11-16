@@ -4,7 +4,7 @@ VALUES (
 	<cfqueryparam value="#form.name#">,
 	<cfqueryparam value="#form.subject#">,
 	<cfqueryparam value="#form.message#">,
-	UTC_TIMESTAMP()
+	<cfqueryparam value="#dateConvert("local2utc", now())#" cfsqltype="cf_sql_timestamp">
 )
 </cfquery>
 
