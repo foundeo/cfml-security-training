@@ -30,7 +30,7 @@
 		<cfqueryparam value="#form.password#">,
 		<cfqueryparam value="#cffile.serverFile#">,
 		0,
-		UTC_TIMESTAMP()
+		<cfqueryparam value="#dateConvert("local2utc", now())#" cfsqltype="cf_sql_timestamp">
 	)
 </cfquery>
 
