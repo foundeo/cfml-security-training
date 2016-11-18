@@ -11,7 +11,7 @@
     <div id="#lessonID#Body" class="panel-collapse collapse" role="tabpanel" aria-labelledby="#lessonID#Heading">
         <div class="panel-body">
             <h5>Are session cookies protected?</h5>
-            <p>Session identifiers should be kept secret. The cookies should be <code>httpOnly</code> and <code>secure</code> - use the developer </p>
+            <p>Session identifiers should be kept secret. The cookies should be <code>httpOnly</code> and <code>secure</code> - use the developer tools in your browser.</p>
 
             <h5>Can you make the session cookies <code>httpOnly</code> and <code>secure</code>?</h5>
             <p>There are a few ways to do this.</p>
@@ -23,6 +23,10 @@
             <p>Look for <code>CFID</code> <code>CFTOKEN</code> or <code>JSESSIONID</code> in the url / addressbar.
 
             <h5>Can you fix code so it does not put session identifiers in the URL?</h5>
+            <p>Look for <code>cflocation</code> tags.</p>
+
+            <h5>Can you implement SessionRotate() and SessionInvlidate() in the code?</h5>
+
 
             <br>
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="###lessonID#Hint" aria-expanded="false" aria-controls="#lessonID#Hint">
@@ -48,7 +52,11 @@
                     <strong>Session Identifiers in URL</strong><br>
                     <p>Make sure all <code>cflocation</code> tags have <code>addtoken="false"</code> set.</p>
 
-                    
+                    <strong>Add SessionRotate()</strong>
+                    <p>After successful login in <code>/my-account/index.cfm</code> and in <code>/my-account/login-check.cfm</code> for <em>Remember Me</em> logins.</p>
+
+                    <strong>Add SessionInvalidate()</strong>
+                    <p>Add after logout: <code>/my-account/logout.cfm</code>
                     
               </div>
             </div>
