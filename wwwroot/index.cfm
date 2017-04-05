@@ -16,7 +16,7 @@
 				SELECT 1 <cfif request.dbType IS "derby"> FROM users</cfif>
 			</cfquery>
 			<div class="alert alert-success">
-				<strong><span class="glyphicon glyphicon-ok"></span> Datasource: #encodeForHTML(application.dsn)# setup successfully.</strong> 
+				<strong><span class="glyphicon glyphicon-ok"></span> Datasource: #encodeForHTML(application.dsn)# (#encodeForHTML(request.dbType)#) setup successfully.</strong> 
 			</div>
 			<cfcatch>
 				<div class="alert alert-danger">

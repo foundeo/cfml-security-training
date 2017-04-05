@@ -8,7 +8,13 @@ component {
 	this.sessionCookie.httpOnly = false;
 	this.sessionCookie.secure = false;
 	this.sessionCookie.timeout = -1;
-	this.dbType = "derby";
+	this.system = createObject("java", "java.lang.System");
+	if (!isNull(this.system.getEnv("DATABASE_TYPE"))) {
+		this.dbType = this.system.getEnv("DATABASE_TYPE");
+	} else {
+		this.dbType = "derby";
+	}
+	
 
 	if (this.dbType == "mysql") { 
 		//create datasource requires CF11+
