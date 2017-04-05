@@ -100,7 +100,7 @@
 			<cfset usedMemory = totalMemory-freeMemory>
 			<cfset percentUsed = Round( (usedMemory/totalMemory) * 100 )>
 			<div class="progress" style="min-height:24px;">
-  					<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="#int(percentUsed)#" aria-valuemin="0" aria-valuemax="100" style="min-width: 4em;width:#int(percentUsed)#%;">
+  					<div class="progress-bar <cfif percentUsed GT 80>progress-bar-warning><cfelse>progress-bar-success</cfif>" role="progressbar" aria-valuenow="#int(percentUsed)#" aria-valuemin="0" aria-valuemax="100" style="min-width: 4em;width:#int(percentUsed)#%;">
   						#int(percentUsed)#%
     				</div>
     				
