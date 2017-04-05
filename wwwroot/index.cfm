@@ -90,6 +90,27 @@
 		<td>OS:</td>
 		<td>#server.os.name# #server.os.version#</td>
 	<tr>
+	<tr>
+		<td>Memory:</td>
+		<td>
+			<cfset runtime = createObject("java","java.lang.Runtime").getRuntime()>
+			<cfset freeMemory = runtime.freeMemory() / 1024 / 1024>
+			<cfset totalMemory = runtime.totalMemory() / 1024 / 1024>
+			<cfset maxMemory = runtime.maxMemory() / 1024 / 1024>
+			<cfset usedMemory = totalMemory-freeMemory>
+			<cfset percentUsed = Round( (usedMemory/totalMemory) * 100 )>
+			<div class="progress" style="min-height:24px;">
+  					<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="#int(percentUsed)#" aria-valuemin="0" aria-valuemax="100" style="min-width: 4em;width:#int(percentUsed)#%;">
+  						#int(percentUsed)#%
+    				</div>
+    				
+    		</div>
+    		#int(usedMemory)#mb in use of #int(totalMemory)#mb allocated (max: #int(maxMemory)#mb)
+  </div>
+</div>
+
+		</td>
+	</tr>
 
 </table>
 </cfoutput>
