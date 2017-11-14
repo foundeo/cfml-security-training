@@ -49,7 +49,7 @@
 	<tbody>
 		<cfoutput query="contact">
 			<tr>
-				<td>#contact.name#</td>
+				<td>#iif(len(contact.name), de(contact.name), de("Anonymous"))#</td>
 				<td><strong>#contact.subject#</strong><br><br>#contact.message#</td>
 				<td>#dateTimeFormat(contact.date_posted, "full")#</td>
 				<td><a href="delete-message.cfm?id=#contact.id#" class="btn btn-large btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</a>
