@@ -1,5 +1,5 @@
 <div class="jumbotron">
-	<h1>Welcome to Bank of Insecurity <small>Thankfully we are not a real bank.</small></h1>
+	<h1>Welcome to Bank of Insecurity <br><small>Thankfully not a real bank.</small></h1>
 	<div class="lead">
 		This application is full of web application vulnerabilities or security holes. It is used for teaching CFML developers about web application security.
 	</div>
