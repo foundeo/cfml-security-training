@@ -12,7 +12,7 @@
         <div class="panel-body">
             <h5>Can you find code that might allow remote code exeuction?</h5>
             
-            <h5>Can you run code remotly?</h5>
+            <h5>Can you run code remotely?</h5>
 
             <br>
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="###lessonID#Hint" aria-expanded="false" aria-controls="#lessonID#Hint">
