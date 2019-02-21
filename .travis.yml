@@ -1,0 +1,12 @@
+language: java
+sudo: false
+jdk:
+- oraclejdk8
+before_install:
+- curl --location -o /tmp/box.zip https://www.ortussolutions.com/parent/download/commandbox/type/bin
+- unzip /tmp/box.zip
+- chmod a+x /tmp/box
+install:
+- /tmp/box install fixinator
+script:
+- /tmp/box fixinator path=. confidence=low
