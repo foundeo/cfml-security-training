@@ -4,7 +4,7 @@ jdk:
 - oraclejdk8
 before_install:
 - curl --location -o /tmp/box.zip https://www.ortussolutions.com/parent/download/commandbox/type/bin
-- unzip /tmp/box.zip
+- unzip /tmp/box.zip -d .
 - chmod a+x box
 install:
 - box install fixinator
