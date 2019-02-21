@@ -5,8 +5,8 @@ jdk:
 before_install:
 - curl --location -o /tmp/box.zip https://www.ortussolutions.com/parent/download/commandbox/type/bin
 - unzip /tmp/box.zip
-- chmod a+x /tmp/box
+- chmod a+x box
 install:
-- /tmp/box install fixinator
+- box install fixinator
 script:
-- /tmp/box fixinator path=. confidence=low
+- box fixinator path=. confidence=low
