@@ -14,5 +14,5 @@ jobs:
       - run: /tmp/box fixinator path=. confidence=low resultFormat=html resultFile=/tmp/results/fixinator-results.html
       
       - store_artifacts: # uploads the result file
-          path: /tmp/fixinator-results.html
+          path: /tmp/results/
  
