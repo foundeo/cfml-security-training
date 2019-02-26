@@ -10,8 +10,9 @@ jobs:
       - run: unzip /tmp/box.zip -d /tmp/
       - run: chmod a+x /tmp/box
       - run: /tmp/box install fixinator
-      - run: /tmp/box fixinator path=. confidence=low resultFormat=html resultFile=/tmp/fixinator-results.html
+      - run: mkdir /tmp/results
+      - run: /tmp/box fixinator path=. confidence=low resultFormat=html resultFile=/tmp/results/fixinator-results.html
       
-      - store_test_results: # uploads the test results
+      - store_artifacts: # uploads the result file
           path: /tmp/fixinator-results.html
  
