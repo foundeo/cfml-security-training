@@ -11,8 +11,11 @@ jobs:
       - run: chmod a+x /tmp/box
       - run: /tmp/box install fixinator
       - run: mkdir /tmp/results
-      - run: /tmp/box fixinator path=. confidence=low resultFormat=html resultFile=/tmp/results/fixinator-results.html
+      - run: /tmp/box fixinator path=. confidence=low resultFormat=junit resultFile=/tmp/results/fixinator-results.xml
       
+      - store_test_results: 
+          path: /tmp/results/
+
       - store_artifacts: # uploads the result file
           path: /tmp/results/
  
