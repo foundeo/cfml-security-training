@@ -5,7 +5,7 @@ jobs:
       - image: circleci/openjdk:11-jdk-stretch 
 
     steps:      
-      
+      - checkout
       - run: curl --location -o /tmp/box.zip https://www.ortussolutions.com/parent/download/commandbox/type/bin
       - run: unzip /tmp/box.zip -d /tmp/
       - run: chmod a+x /tmp/box
