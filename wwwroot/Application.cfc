@@ -4,6 +4,7 @@ component {
 	this.scriptProtect = "none";
 	this.compileExtForInclude = "*";
 	this.searchImplicitScopes = true;
+	this.blockedExtForFileUpload = "";
 
 	this.sessionCookie.httpOnly = false;
 	this.sessionCookie.secure = false;
