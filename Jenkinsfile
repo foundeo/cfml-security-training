@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Fixinator') {
             steps {
-              curl --location -o /tmp/box.zip https://www.ortussolutions.com/parent/download/commandbox/type/bin
+              curl -L -o /tmp/box.zip https://www.ortussolutions.com/parent/download/commandbox/type/bin
               unzip /tmp/box.zip -d /tmp/
               chmod a+x /tmp/box
               /tmp/box install fixinator'
