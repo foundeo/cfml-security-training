@@ -7,11 +7,11 @@ pipeline {
     stages {
         stage('Fixinator') {
             steps {
-              curl -L -o /tmp/box.zip https://www.ortussolutions.com/parent/download/commandbox/type/bin
-              unzip /tmp/box.zip -d /tmp/
-              chmod a+x /tmp/box
-              /tmp/box install fixinator'
-              /tmp/box fixinator path=. confidence=high resultFormat=junit resultFile=./fixinator-report.xml
+              sh 'curl -L -o /tmp/box.zip https://www.ortussolutions.com/parent/download/commandbox/type/bin'
+              sh 'unzip /tmp/box.zip -d /tmp/'
+              sh 'chmod a+x /tmp/box'
+              sh '/tmp/box install fixinator'
+              sh '/tmp/box fixinator path=. confidence=high resultFormat=junit resultFile=./fixinator-report.xml'
             }
         }
     }
