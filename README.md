@@ -1,6 +1,6 @@
 # cfml-security-training
 
-This is a CFML web application that intentionally contains many many security vulnerabilties for training purposes. 
+This is a CFML web application that intentionally contains many many security vulnerabilties for training purposes. It is used in [Foundeo's ColdFusion Security Training Course](https://foundeo.com/consulting/coldfusion/security-training/).
 
 Here's a listing of some of the vulnerabilities you can find in this application:
 
