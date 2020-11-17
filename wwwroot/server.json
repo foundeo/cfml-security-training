@@ -1,5 +1,8 @@
 {
     "app":{
         "cfengine":"adobe@2018"
+    },
+    "web":{
+        "directoryBrowsing":"true"
     }
 }
