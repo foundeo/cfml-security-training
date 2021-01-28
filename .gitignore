@@ -3,3 +3,4 @@ wwwroot/my-account/photos/*.cfm
 wwwroot/tools/scripts/generate-image.cfm
 wwwroot/tools/scripts/img.cfm
 wwwroot/fuseguard/
+db/boi
