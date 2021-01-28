@@ -29,6 +29,9 @@ component {
 		};
 
 	} else if (this.dbType == "derby") {
+		if (!directoryExists(getRootDirectory() & "db/boi/")) {
+			directoryCopy(getRootDirectory() & "db/derby-template/", getRootDirectory() & "db/boi/", true);
+		}
 		this.datasources["bankofinsecurity"] = {
 			database: getRootDirectory() & "db/boi/",
 			driver: "Apache Derby Embedded"
