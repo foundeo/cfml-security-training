@@ -1,0 +1,9 @@
+{
+    "ignorePaths":["tools", "loggers", "scripts"],
+    "ignoreExtensions":["ign","ore"],
+    "ignoreScanners":["session-cookie-not-secure", "xss"],
+    "ignorePatterns": {
+        "xss": ["myCustomEncodeHTML("],
+        "sqlinjection": ["application.table_prefix", "application.items_per_page"]
+    }
+}
