@@ -4,13 +4,13 @@
 	WHERE title LIKE '%#url.search#%'
 	OR story LIKE '%#url.search#%'
 </cfquery>
-<h2>News Search</h2>
+<h2 id="search_header">News Search</h2>
 <cfif news.recordcount EQ 0>
-	<div class="alert alert-warning">
+	<div id="search_alert" class="alert alert-warning">
 		Sorry your search for <strong><cfoutput>#url.search#</cfoutput></strong> did not turn up any results.
 	</div>
 <cfelse>
-	<div class="alert alert-success">
+	<div id="search_alert" class="alert alert-success">
 		Sorry your search for <strong><cfoutput>#url.search#</cfoutput></strong> yeilded <cfoutput>#news.recordcount#</cfoutput> <cfif news.recordcount EQ 1>story<cfelse>stories.</cfif>
 	</div>
 	<cfoutput query="news">

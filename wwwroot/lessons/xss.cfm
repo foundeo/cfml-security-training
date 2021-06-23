@@ -54,6 +54,36 @@
                     <a href="../news/search.cfm?search=#encodeForURL(xss)#">/news/search.cfm?search=#encodeForHTML(xss)#</a>
                     <br>
 
+                    <strong>Reflected XSS Example: Login Form</strong><br>
+                    <cfsavecontent variable="xss">
+                        </strong></div>
+                        <form onsubmit="alert('Not the real login form');" method="POST">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                
+                                <input type="password" class="form-control" id="pwd" name="password" placeholder="Password">
+                            </div>
+                          
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="remember" value="1"> Remember Me
+                                </label>
+                            </div>
+                        
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+                        <script>
+                            document.getElementById('search_alert').style.display='none';
+                            document.getElementById('search_header').innerText = 'Login';
+                        </script>
+                        <div style="display:none;">
+                    </cfsavecontent>
+                    <cfset xss = trim(xss)>
+                    <a href="../news/search.cfm?search=#encodeForURL(xss)#">/news/search.cfm?search=#encodeForHTML(xss)#</a>
+                    <br>
+
                     <strong>Persistant XSS</strong>
                     <p>Post a message to the Contact Us form, and then login as <code>pete</code>, an admin to view it.</p>
 
