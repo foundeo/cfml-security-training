@@ -4,6 +4,7 @@
 	<cfif session.isAdmin>
 		<a href="admin/" class="btn btn-danger btn-large">Bank Admin</a>
 	</cfif>
+	<cfoutput><a href="statement.cfm?id=#session.userID#&month=#monthAsString(month(now()))#&year=#year(now())#" class="btn btn-info btn-large">Statement</a></cfoutput>
 	<a href="profile.cfm" class="btn btn-default btn-large">Profile</a>
 	<a href="logout.cfm" class="btn btn-default btn-large">Logout</a>
 </div>
