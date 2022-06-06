@@ -12,7 +12,7 @@
 		<input type="hidden" name="id" value="#session.userID#">
 		<div class="form-group">
 			<label for="username">Username:</label>
-	        <input type="text" class="form-control" id="username" name="username" value="#encodeForHTMLAttribute(session.username)#" placeholder="Username">
+	        <input type="text" class="form-control" id="username" name="username" value="#encodeForHTMLAttribute(session.username)#" placeholder="Username" autocomplete="off">
 	    </div>
     </cfoutput>
     <input type="submit" class="btn btn-primary" value="Update Profile">

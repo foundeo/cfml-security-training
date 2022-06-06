@@ -1,11 +1,11 @@
 <h2>Contact Us</h2>
 <form action="contact.cfm" method="POST">
     <div class="form-group">
-        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" autocomplete="off">
     </div>
     <div class="form-group">
         
-        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" autocomplete="off">
     </div>
   
     <div class="form-group">

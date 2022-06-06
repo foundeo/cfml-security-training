@@ -27,7 +27,7 @@
 	
 	<br /><br />
 	
-	<input type="text" name="ua" value="" placeholder="Custom User Agent" />
+	<input type="text" name="ua" value="" placeholder="Custom User Agent" autocomplete="off" />
 	<br /><br />
 	<input type="checkbox" name="outputFileContent" value="1"> Output Response as HTML
 	</cfoutput>

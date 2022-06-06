@@ -9,7 +9,7 @@
 <div class="pull-right">
 	<form class="form-inline" action="search.cfm" method="GET">
   		<div class="form-group">
-  			<input type="search" name="search" class="form-control">
+  			<input type="search" name="search" class="form-control" autocomplete="off">
   		</div>
   		<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> Search News</button>
 
