@@ -5,6 +5,9 @@ component {
 	this.compileExtForInclude = "*";
 	this.searchImplicitScopes = true;
 	this.blockedExtForFileUpload = "";
+	
+	//see LDEV-4184
+	//this.xmlSettings = { secure: true };
 
 	this.sessionCookie.httpOnly = false;
 	this.sessionCookie.secure = false;

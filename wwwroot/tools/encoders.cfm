@@ -8,6 +8,7 @@
             <th colspan="2" class="danger">URL</th>
             <th colspan="2" class="info">JS</th>
             <th class="active">CSS</th>
+            <th colspan="2">LDAP</th>
         </tr>
         <tr>
             <th class="success">htmlEditFormat</th>
@@ -21,6 +22,8 @@
             <th class="info">jsStringFormat</th>
             <th class="info">encodeForJavascript</th>
             <th class="active">encodeForCSS</th>
+            <th class="">encodeForLDAP</th>
+            <th class="">encodeForDN</th>
         </tr>
     </thead>
     <tbody>
@@ -39,6 +42,8 @@
             <td class="info">#replace(jsStringFormat(chr(variables.index)), "&", "&amp;")#</td>
             <td class="info">#replace(encodeForJavascript(chr(variables.index)), "&", "&amp;")#</td>
             <td class="active">#replace(encodeForCSS(chr(variables.index)), "&", "&amp;")#</td>
+            <td class="">#replace(encodeForLDAP(chr(variables.index)), "&", "&amp;")#</td>
+            <td class="">#replace(encodeForDN(chr(variables.index)), "&", "&amp;")#</td>
         </tr>
         </cfoutput>
         </cfloop>
