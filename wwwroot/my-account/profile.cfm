@@ -2,7 +2,7 @@
 
 <cfif structKeyExists(form, "username")>
 	<!--- using the cfupdate tag makes my job almost too easy! --->
-	<cfupdate datasource="#application.dsn#" tablename="USERS">
+	<cfupdate datasource="#application.dsn#" tablename="users">
 	<cfset session.username = form.username>
 	<div class="alert alert-success">Your user account has been updated.</div>
 </cfif>
