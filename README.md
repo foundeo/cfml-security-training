@@ -35,9 +35,12 @@ We'll use commandbox or `box` for short to spin up a local CFML server. You can 
 Start up a CFML server, using commandbox you can just do:
 
 	cd wwwroot
-	box server start cfengine=adobe@2016
+	box server start cfengine=adobe@2023
   
-The above will start up a CF2016 server on a random port number and open your default web browser to the server.
+The above will start up a CF2023 server on a random port number and open your default web browser to the server.
+
+Next, open up ColdFusion Admin by going to http://127.0.0.1:{your port}/CFIDE/administrator/index.cfm, eg. http://127.0.0.1:51506/CFIDE/administrator/index.cfm
+Login with username: admin password: commandbox. Go to Package Manager and install the derby package. 
 
 
 ### Optional: MySQL Setup
